@@ -19,17 +19,19 @@ class CorpoCeleste:
 
         G = 0.5 #Gravidade
 
-        # calculo do seno e do cosseno
+        # calculo da distancia
         distancia_x = outro_corpo.x - self.x
         distancia_y = outro_corpo.y - self.y
         distancia_total = sqrt(distancia_x**2 + distancia_y**2)
 
-        cosseno = distancia_x / distancia_total
-        seno = distancia_y / distancia_total
 
         # evitando que a divisão seja por zero
         if distancia_total < 1:
-            distancia_total = 1
+           distancia_total = 1
+        
+        # calculo do seno e cosseno
+        cosseno = distancia_x / distancia_total
+        seno = distancia_y / distancia_total
         
 
         # F = G * ((M1 * M2) / (D * D))
